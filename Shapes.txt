@@ -1,0 +1,98 @@
+    //Square
+    std::vector<Pnt2d> points{
+        Pnt2d{0.0f, 0.0f},  // Bottom left of the square
+        Pnt2d{1.0f, 0.0f},  // Bottom right of the square
+        Pnt2d{1.0f, 1.0f},  // Top right of the square
+        Pnt2d{0.0f, 1.0f}   // Top left of the square
+    };
+
+    std::vector<Edge> edges{
+        Edge{0, 1},  // Bottom line
+        Edge{1, 2},  // Right line
+        Edge{2, 3},  // Top line
+        Edge{3, 0}   // Left line
+    };
+
+
+
+    
+    //Square
+    std::vector<Pnt2d> points{
+        Pnt2d{-50.0f, -50.0f},      // Bottom left of the square
+        Pnt2d{50.0f, -50.0f},    // Bottom right of the square
+        Pnt2d{50.0f, 50.0f},  // Top right of the square
+        Pnt2d{-50.0f, 50.0f}     // Top left of the square
+    };
+    std::vector<Edge> edges{
+        Edge{0, 1},  // Bottom line
+        Edge{1, 2},  // Right line
+        Edge{2, 3},  // Top line
+        Edge{3, 0}   // Left line
+    };
+
+
+
+    
+        // DVD Logo Shape (Approximate with rounded corners)
+    std::vector<Pnt2d> points{
+        // Bottom edge
+        Pnt2d{-80.0f, -40.0f}, // Bottom left of the rectangle
+        Pnt2d{-60.0f, -40.0f}, // Bottom left rounded corner
+        Pnt2d{-40.0f, -40.0f}, // Bottom edge
+        Pnt2d{-20.0f, -40.0f}, // Bottom edge
+        Pnt2d{0.0f, -40.0f},   // Bottom edge
+        Pnt2d{20.0f, -40.0f},  // Bottom edge
+        Pnt2d{40.0f, -40.0f},  // Bottom right edge
+        Pnt2d{60.0f, -40.0f},  // Bottom right rounded corner
+        Pnt2d{80.0f, -40.0f},  // Bottom right corner
+        
+        // Right edge
+        Pnt2d{80.0f, -20.0f},  // Right bottom rounded corner
+        Pnt2d{80.0f, 0.0f},    // Right side
+        Pnt2d{80.0f, 20.0f},   // Right side
+        Pnt2d{80.0f, 40.0f},   // Right top corner
+        
+        // Top edge
+        Pnt2d{60.0f, 40.0f},   // Top right rounded corner
+        Pnt2d{40.0f, 40.0f},   // Top edge
+        Pnt2d{20.0f, 40.0f},   // Top edge
+        Pnt2d{0.0f, 40.0f},    // Top edge
+        Pnt2d{-20.0f, 40.0f},  // Top edge
+        Pnt2d{-40.0f, 40.0f},  // Top left edge
+        Pnt2d{-60.0f, 40.0f},  // Top left rounded corner
+        
+        // Left edge
+        Pnt2d{-80.0f, 20.0f},  // Left top rounded corner
+        Pnt2d{-80.0f, 0.0f},   // Left side
+        Pnt2d{-80.0f, -20.0f}, // Left side
+    };
+
+    // Edges to form the wireframe (connect the points)
+    std::vector<Edge> edges{
+        Edge{0, 1},  // Bottom left to first rounded corner
+        Edge{1, 2},  // Bottom rounded corner to edge
+        Edge{2, 3},  // Continue along bottom edge
+        Edge{3, 4},  
+        Edge{4, 5},
+        Edge{5, 6},
+        Edge{6, 7},
+        Edge{7, 8},  // Bottom right corner
+
+        Edge{8, 9},  // Right side
+        Edge{9, 10},
+        Edge{10, 11},
+        Edge{11, 12}, // Right top corner
+
+        Edge{12, 13}, // Top right to next corner
+        Edge{13, 14},
+        Edge{14, 15},
+        Edge{15, 16},
+        Edge{16, 17},
+        Edge{17, 18}, // Top left corner
+        
+        Edge{18, 19}, // Left side
+        Edge{19, 20},
+        Edge{20, 21},
+        Edge{21, 0}   // Left top back to start point
+    };
+
